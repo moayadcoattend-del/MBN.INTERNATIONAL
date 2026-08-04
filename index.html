@@ -3,114 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBN International | Construction & Manpower Supply KSA</title>
-    <!-- Google Fonts & Font Awesome Icons -->
+    <title>MBN International | Premier Construction & Manpower Solutions Saudi Arabia</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header class="navbar">
-        <div class="container nav-container">
+    <!-- TOP CONTACT BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i class="fa-solid fa-location-dot"></i> King Fahd Road, Olaya District, Riyadh, KSA</span>
+                <span><i class="fa-solid fa-envelope"></i> <a href="mailto:info@mbn-international.com">info@mbn-international.com</a></span>
+                <span><i class="fa-solid fa-phone"></i> <a href="tel:+966112345678">+966 11 234 5678</a></span>
+            </div>
+            <div class="top-actions">
+                <a href="https://wa.me/966500000000?text=Hello%20MBN%20International,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="top-wa-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Instant WhatsApp
+                </a>
+                <span class="vision-badge"><i class="fa-solid fa-award"></i> Vision 2030 Partner</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVIGATION -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
             <a href="#home" class="logo-link">
-                <img src="logo.jpg" alt="MBN International Logo" class="brand-logo">
+                <img src="logo.png" alt="MBN International Logo" class="brand-logo">
             </a>
-            
-            <nav class="nav-links" id="navLinks">
+
+            <nav class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About Us</a>
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#careers" class="nav-link">Careers</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
             </nav>
 
-            <div class="nav-cta">
-                <a href="https://wa.me/966500000000?text=Hello%20MBN%20International,%20I%20would%20like%20to%20inquire%20about%20labor%20supply%20in%20Riyadh." target="_blank" class="btn btn-whatsapp-nav">
-                    <i class="fa-brands fa-whatsapp"></i> Quick Inquiry
-                </a>
-                <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle Navigation Menu">
+            <div class="header-cta">
+                <a href="#contact" class="btn btn-gold">Request Workforce / Quote</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section id="home" class="hero">
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <span class="badge"><i class="fa-solid fa-location-dot"></i> Riyadh & KSA Mega-Projects Partner</span>
-            <h1>Premier Construction & Workforce Supply Solutions</h1>
-            <p>Empowering Saudi Arabia’s Vision 2030 megaprojects with top-tier construction contracting and fully compliant skilled & unskilled manpower deployment across the Kingdom.</p>
-            
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fa-solid fa-users-gear"></i> Request Workforce
-                </a>
-                <a href="https://wa.me/966500000000?text=Hello%20MBN%20International,%20I%20need%20an%20urgent%20workforce%20quotation%20for%20a%20project%20in%20Saudi%20Arabia." target="_blank" class="btn btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Inquiry
-                </a>
+            <div class="trust-pills">
+                <span class="pill"><i class="fa-solid fa-shield-halved"></i> Qiwa Compliant</span>
+                <span class="pill"><i class="fa-solid fa-user-check"></i> Muqeem Verified</span>
+                <span class="pill"><i class="fa-solid fa-landmark"></i> KSA Vision 2030 Aligned</span>
+            </div>
+            <h1 class="hero-title">Empowering Kingdom-Wide Infrastructure & Industrial Growth</h1>
+            <p class="hero-subtitle">
+                MBN International is Riyadh's premier partner for large-scale commercial construction, civil contracting, and rapid deployment of certified, high-caliber technical workforce across Saudi Arabia.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-gold btn-lg"><i class="fa-solid fa-city"></i> Explore Projects</a>
+                <a href="#services" class="btn btn-outline btn-lg"><i class="fa-solid fa-users-gear"></i> Hire Workforce</a>
             </div>
 
+            <!-- Metric Cards Overlay -->
             <div class="hero-stats">
-                <div class="stat-item">
+                <div class="stat-card">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">12,500+</span>
+                    <span class="stat-label">Deployed Workforce</span>
+                </div>
+                <div class="stat-card">
                     <span class="stat-num">100%</span>
-                    <span class="stat-label">KSA Labor Law Compliant</span>
+                    <span class="stat-label">HSE Compliance Rate</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-num">10,000+</span>
-                    <span class="stat-label">Workforce Mobilized</span>
-                </div>
-                <div class="stat-item">
+                <div class="stat-card">
                     <span class="stat-num">24/7</span>
-                    <span class="stat-label">Operations Support</span>
+                    <span class="stat-label">Site Support & Mobilization</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about section-padding">
+    <!-- ABOUT US DIVISION -->
+    <section class="about section-padding" id="about">
         <div class="container">
-            <div class="about-grid">
+            <div class="section-grid">
                 <div class="about-text">
-                    <span class="section-tag">About MBN International</span>
-                    <h2>Reliable Manpower & Infrastructure Support in Saudi Arabia</h2>
-                    <p>Based in the heart of Riyadh, <strong>MBN International</strong> stands as a premier provider of construction contracting and workforce supply services. We support giga-projects across Riyadh, NEOM, Red Sea, Qiddiya, and Eastern Province with rapidly deployable, highly qualified personnel.</p>
-                    
-                    <p>We take regulatory compliance seriously. All operations are strictly executed in alignment with Saudi Labor Laws, ensuring seamless administrative and legal peace of mind for our corporate clients.</p>
+                    <span class="section-tagline">About MBN International</span>
+                    <h2 class="section-heading">Building Saudi Arabia's Future with Unmatched Precision & Scale</h2>
+                    <p class="lead-text">
+                        Headquartered in Riyadh, MBN International has established itself as an indispensable powerhouse in civil contracting and specialized manpower solutions throughout the Kingdom.
+                    </p>
+                    <p class="body-text">
+                        Driven by Saudi Arabia's Vision 2030 initiative, we supply top-tier engineering expertise and robust labor logistics to major giga-projects, commercial high-rises, and industrial energy complexes. Our rigorous quality control, Qiwa-certified talent pools, and flawless Health, Safety, and Environment (HSE) track record guarantee turnkey execution without compromise.
+                    </p>
 
-                    <div class="compliance-grid">
-                        <div class="compliance-card">
-                            <i class="fa-solid fa-shield-halved"></i>
+                    <div class="vision-mission-grid">
+                        <div class="vm-box">
+                            <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
                             <div>
-                                <h4>Qiwa Registered</h4>
-                                <p>Seamless contract documentation and verified worker transfers.</p>
+                                <h4>Our Vision</h4>
+                                <p>To be Saudi Arabia’s leading dynamic infrastructure contractor and workforce provider known for reliability and excellence.</p>
                             </div>
                         </div>
-                        <div class="compliance-card">
-                            <i class="fa-solid fa-address-card"></i>
+                        <div class="vm-box">
+                            <div class="vm-icon"><i class="fa-solid fa-bullseye"></i></div>
                             <div>
-                                <h4>Muqeem Verified</h4>
-                                <p>Full legal status, active Iqama, and insurance validation.</p>
+                                <h4>Our Mission</h4>
+                                <p>Delivering exceptional structural developments and fully compliant human capital tailored to complex site demands.</p>
                             </div>
                         </div>
-                        <div class="compliance-card">
-                            <i class="fa-solid fa-building-columns"></i>
-                            <div>
-                                <h4>MHRSD Compliant</h4>
-                                <p>Strict adherence to Ministry of Human Resources rules and wage protection.</p>
-                            </div>
+                    </div>
+
+                    <div class="hse-banner">
+                        <i class="fa-solid fa-hard-hat hse-icon"></i>
+                        <div>
+                            <strong>Strict HSE & Regulatory Commitment:</strong>
+                            <p>Full compliance with Saudi Ministry of Human Resources, GOSI, and international ISO site safety standard protocols.</p>
                         </div>
-                        <div class="compliance-card">
-                            <i class="fa-solid fa-file-contract"></i>
-                            <div>
-                                <h4>Flexible Commercial Contracts</h4>
-                                <p>Short-term and long-term contracts priced fairly in SAR (ر.س).</p>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="visual-card main-img">
+                        <i class="fa-solid fa-building-user visual-icon"></i>
+                        <h3>Engineered for Grandeur</h3>
+                        <p>Turnkey civil and commercial engineering solutions based out of Central Riyadh.</p>
+                    </div>
+                    <div class="visual-card sub-img">
+                        <i class="fa-solid fa-people-group visual-icon"></i>
+                        <h3>Rapid Workforce Deployment</h3>
+                        <p>Skilled, certified labor supply available on short notice anywhere in KSA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DUAL PRIMARY SERVICES -->
+    <section class="services section-padding bg-light" id="services">
+        <div class="container">
+            <div class="text-center header-block">
+                <span class="section-tagline">Our Core Expertise</span>
+                <h2 class="section-heading">Dual Operational Divisions</h2>
+                <p class="section-subtext">Comprehensive engineering contracting combined with rapid, fully compliant Saudi manpower supply.</p>
+            </div>
+
+            <!-- Service Tabs Switcher -->
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="div-a">
+                    <i class="fa-solid fa-trowel-bricks"></i> Division A: Commercial Construction & Civil Contracting
+                </button>
+                <button class="tab-btn" data-tab="div-b">
+                    <i class="fa-solid fa-user-gear"></i> Division B: Manpower & Labor Supply
+                </button>
+            </div>
+
+            <!-- Tab Content Division A -->
+            <div class="tab-content active" id="div-a">
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="sc-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <h3>Site Preparation & Earthworks</h3>
+                        <p>Comprehensive land clearing, excavation, grading, soil stabilization, and foundational site logistics across desert and urban terrains.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="sc-icon"><i class="fa-solid fa-vihara"></i></div>
+                        <h3>Civil & Structural Works</h3>
+                        <p>End-to-end reinforced concrete structure fabrication, steel framing, foundations, structural slabs, and high-rise core erection.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="sc-icon"><i class="fa-solid fa-building-circle-check"></i></div>
+                        <h3>Commercial Development</h3>
+                        <p>Turnkey construction of corporate offices, shopping complexes, industrial warehouses, and institutional facilities.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="sc-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h3>Project Management & Supervision</h3>
+                        <p>Certified PMO oversight, quality assurance, safety audits, timeline control, and regulatory code inspections.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content Division B -->
+            <div class="tab-content" id="div-b">
+                <div class="manpower-intro">
+                    <div class="mp-badge">Qiwa & Ajeer Integrated</div>
+                    <h3>Fully Documented & Legal Saudi Workforce Solutions</h3>
+                    <p>MBN International provides fast-track mobilization of skilled, semi-skilled, and technical personnel under compliant contractual agreements.</p>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="sc-icon"><i class="fa-solid fa-hammer"></i></div>
+                        <h3>Masons & Steel Fixers</h3>
+                        <p>Expert block masons, plasterers, tile fixers, rebar steel fixers, and shuttering carpenters ready for immediate site onboarding.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="sc-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                        <h3>Certified Electricians & Plumbers</h3>
+                        <p>MEP technicians experienced in industrial wiring, heavy HVAC systems, high-pressure piping, and plumbing infrastructure.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="sc-icon"><i class="fa-solid fa-truck-monster"></i></div>
+                        <h3>Heavy Equipment Operators</h3>
+                        <p>Licensed operators for excavators, tower cranes, mobile cranes, bulldozers, and heavy transport vehicles.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="sc-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <h3>QA/QC Supervisors & Safety Officers</h3>
+                        <p>NEBOSH/OSHA certified safety supervisors and rigorous QA/QC engineers to maintain quality and safety targets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO & FEATURED PROJECTS -->
+    <section class="projects section-padding" id="projects">
+        <div class="container">
+            <div class="text-center header-block">
+                <span class="section-tagline">Proven Track Record</span>
+                <h2 class="section-heading">Featured Key Projects in KSA</h2>
+                <p class="section-subtext">Delivering infrastructure excellence in Riyadh, NEOM, Western Province, and Eastern Province.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="civil">Civil & Commercial</button>
+                <button class="filter-btn" data-filter="manpower">Manpower Deployment</button>
+                <button class="filter-btn" data-filter="infra">Infrastructure & Transit</button>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="civil">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-building"></i>
+                        <span class="project-tag">Civil Contracting</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-loc"><i class="fa-solid fa-location-dot"></i> Riyadh Financial District</span>
+                        <h3>King Fahd Commercial Tower</h3>
+                        <p>Complete structural concrete execution, steel framing, and MEP foundation works for a 35-story commercial complex.</p>
+                        <div class="project-meta">
+                            <span><strong>Scope:</strong> Turnkey Civil</span>
+                            <span><strong>Status:</strong> Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="manpower">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="project-tag">Manpower Supply</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-loc"><i class="fa-solid fa-location-dot"></i> Tabuk / NEOM Region</span>
+                        <h3>Mega Infrastructure Sector Labor Supply</h3>
+                        <p>Mobilized over 2,500 certified trade workers including heavy machinery operators, steel fixers, and HSE officers.</p>
+                        <div class="project-meta">
+                            <span><strong>Scope:</strong> 2,500+ Personnel</span>
+                            <span><strong>Status:</strong> Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="infra">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-train-subway"></i>
+                        <span class="project-tag">Infrastructure</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-loc"><i class="fa-solid fa-location-dot"></i> Metro Network - Line 3, Riyadh</span>
+                        <h3>Riyadh Metro Station Expansion</h3>
+                        <p>Specialized earthworks, deep foundation digging, underground concrete lining, and safety supervisory support.</p>
+                        <div class="project-meta">
+                            <span><strong>Scope:</strong> Earthworks & Concrete</span>
+                            <span><strong>Status:</strong> Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="civil">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-warehouse"></i>
+                        <span class="project-tag">Civil Contracting</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-loc"><i class="fa-solid fa-location-dot"></i> Dammam Industrial City 2</span>
+                        <h3>Logistics & Freight Hub Facilities</h3>
+                        <p>Design-build execution of high-capacity warehouse logistics parks spanning over 45,000 sqm of covered space.</p>
+                        <div class="project-meta">
+                            <span><strong>Scope:</strong> Structural & Site Prep</span>
+                            <span><strong>Status:</strong> Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="manpower">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-campground"></i>
+                        <span class="project-tag">Manpower Supply</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-loc"><i class="fa-solid fa-location-dot"></i> Western Province, KSA</span>
+                        <h3>Red Sea Tourism Project Base Camp</h3>
+                        <p>Deployed rapid response crew of certified plumbers, electricians, site helpers, and catering logistics staff.</p>
+                        <div class="project-meta">
+                            <span><strong>Scope:</strong> 1,200+ Personnel</span>
+                            <span><strong>Status:</strong> Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="infra">
+                    <div class="project-img-placeholder">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                        <span class="project-tag">Infrastructure</span>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-loc"><i class="fa-solid fa-location-dot"></i> Jubail Industrial Area</span>
+                        <h3>Substation & Power Plant Expansion</h3>
+                        <p>Heavy foundation casting, duct bank installation, and high-voltage certified electrical labor deployment.</p>
+                        <div class="project-meta">
+                            <span><strong>Scope:</strong> Civil & Electrical</span>
+                            <span><strong>Status:</strong> Completed</span>
                         </div>
                     </div>
                 </div>
@@ -118,195 +355,252 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services section-padding dark-bg">
+    <!-- CAREERS & OPPORTUNITIES -->
+    <section class="careers section-padding bg-navy text-white" id="careers">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Our Core Capabilities</span>
-                <h2>Comprehensive Construction & Manpower Solutions</h2>
-                <p>Delivering skilled talent and structural capability tailored to major contractors and infrastructure developers in KSA.</p>
-            </div>
-
-            <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
-                    <h3>Construction Contracting</h3>
-                    <p>General structural contracting, civil works, blockwork, plastering, and finishing for commercial and residential developments in Riyadh.</p>
+            <div class="careers-wrapper">
+                <div class="careers-content">
+                    <span class="section-tagline gold-text">Join Our Talent Pool</span>
+                    <h2>Build Your Career with MBN International</h2>
+                    <p>We are constantly seeking qualified engineers, skilled craftsmen, certified equipment operators, and site supervisors to join our major Saudi Vision 2030 developments.</p>
+                    <ul class="careers-list">
+                        <li><i class="fa-solid fa-check gold-text"></i> Prompt salary processing & GOSI / Insurance protection</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Safe working environments compliant with international standards</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Structured career growth on iconic KSA projects</li>
+                    </ul>
+                    <button class="btn btn-gold btn-lg" id="open-career-modal">
+                        <i class="fa-solid fa-user-plus"></i> Apply for Job / Join Talent Pool
+                    </button>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
-                    <h3>Skilled Technical Trades</h3>
-                    <p>Certified Electricians, Plumbers, Certified Welders (3G/6G), Pipefitters, Steel Fixers, and Shuttering Carpenters.</p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-truck-monster"></i></div>
-                    <h3>Heavy Equipment Operators</h3>
-                    <p>Licensed operators for Excavators, Tower Cranes, Mobile Cranes, Bulldozers, and Wheel Loaders with valid KSA licenses.</p>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-people-group"></i></div>
-                    <h3>General & Unskilled Labor</h3>
-                    <p>Reliable site helpers, material handlers, cleaning crews, and loading/unloading manpower ready for immediate site deployment.</p>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
-                    <h3>Engineering & Supervisory</h3>
-                    <p>Site Engineers, QA/QC Inspectors, HSE Officers, and Site Foremen to manage and streamline daily project execution.</p>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>MEP Contracting Support</h3>
-                    <p>Specialized Mechanical, Electrical, and Plumbing deployment teams tailored for complex infrastructure and high-rise projects.</p>
+                <div class="careers-card">
+                    <i class="fa-solid fa-helmet-safety card-bg-icon"></i>
+                    <h3>Urgent Openings in KSA</h3>
+                    <div class="job-pill-list">
+                        <span class="job-badge">Site Engineers (Civil/MEP)</span>
+                        <span class="job-badge">Certified HSE Officers</span>
+                        <span class="job-badge">Heavy Crane Operators</span>
+                        <span class="job-badge">Certified Welders (6G)</span>
+                        <span class="job-badge">Shuttering Carpenters</span>
+                        <span class="job-badge">Electricians & Plumbers</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Direct Operations & Quote Contact Section -->
-    <section id="contact" class="contact section-padding">
+    <!-- INTERACTIVE CONTACT & MAIL HUB -->
+    <section class="contact section-padding bg-light" id="contact">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Direct Operations Channel</span>
-                <h2>Request a Workforce Quote</h2>
-                <p>Connect directly with our Riyadh operations desk. Competitive daily and monthly rates available in Saudi Riyals (SAR / ر.س).</p>
+            <div class="text-center header-block">
+                <span class="section-tagline">How Can We Help You?</span>
+                <h2 class="section-heading">Interactive Contact & Inquiry Hub</h2>
+                <p class="section-subtext">Submit your requirement for immediate response from our commercial or manpower division in Riyadh.</p>
             </div>
 
-            <div class="contact-wrapper">
-                <!-- Direct Communication Channels -->
-                <div class="contact-info-panel">
-                    <h3>Direct Operations Contact</h3>
-                    <p>Skip the delay. Contact our operations desk directly for immediate workforce deployment or project inquiries across Saudi Arabia.</p>
-
-                    <div class="direct-buttons">
-                        <a href="tel:+966500000000" class="btn btn-direct btn-phone">
-                            <i class="fa-solid fa-phone-flip"></i>
-                            <div>
-                                <span>Call Operations Desk</span>
-                                <strong>+966 50 000 0000</strong>
+            <div class="contact-grid">
+                <!-- Form Container -->
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" class="form-control" placeholder="e.g. Abdullah Al-Mansoor" required>
                             </div>
-                        </a>
-
-                        <a href="https://wa.me/966500000000?text=Hello%20MBN%20International,%20I%20am%20requesting%20a%20labor%20supply%20quote%20for%20a%20project%20in%20Riyadh." target="_blank" class="btn btn-direct btn-wa-direct">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <div>
-                                <span>Instant WhatsApp Request</span>
-                                <strong>Chat with Operations</strong>
+                            <div class="form-group">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" id="companyName" class="form-control" placeholder="e.g. Al-Saud Contracting Corp">
                             </div>
-                        </a>
-
-                        <a href="mailto:operations@mbninternational.com" class="btn btn-direct btn-email">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div>
-                                <span>Official Email Inquiry</span>
-                                <strong>operations@mbninternational.com</strong>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="ops-note">
-                        <i class="fa-solid fa-clock"></i>
-                        <p><strong>Response Time:</strong> Immediate action during KSA business hours (Sun-Thu, 8:00 AM - 6:00 PM AST).</p>
-                    </div>
-                </div>
-
-                <!-- Official Workforce Request Form -->
-                <div class="contact-form-panel">
-                    <form id="quoteForm" onsubmit="handleFormSubmit(event)">
-                        <h3>Workforce / Quotation Request Form</h3>
-                        
-                        <div class="form-group">
-                            <label for="clientName">Full Name *</label>
-                            <input type="text" id="clientName" required placeholder="e.g. Mohammed Al-Otaibi">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="companyName">Company / Organization *</label>
-                            <input type="text" id="companyName" required placeholder="e.g. Saudi Contracting Co.">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="ksaCity">Project Location (KSA City) *</label>
-                                <select id="ksaCity" required>
-                                    <option value="" disabled selected>Select Location</option>
-                                    <option value="Riyadh">Riyadh</option>
-                                    <option value="Jeddah">Jeddah</option>
-                                    <option value="NEOM">NEOM / Tabuk</option>
-                                    <option value="Dammam">Dammam / Khobar / Jubail</option>
-                                    <option value="Qiddiya">Qiddiya</option>
-                                    <option value="RedSea">Red Sea Project</option>
-                                    <option value="Madinah">Madinah</option>
-                                    <option value="Makkah">Makkah</option>
-                                    <option value="Other">Other KSA Region</option>
+                                <label for="emailAddress">Email Address *</label>
+                                <input type="email" id="emailAddress" class="form-control" placeholder="name@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneWhatsApp">Phone / WhatsApp *</label>
+                                <input type="tel" id="phoneWhatsApp" class="form-control" placeholder="+966 5X XXX XXXX" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="serviceRequired">Service Required *</label>
+                                <select id="serviceRequired" class="form-control" required>
+                                    <option value="" disabled selected>Select service dynamic...</option>
+                                    <option value="Commercial Construction & Civil Contracting">Division A: Commercial Construction & Civil Contracting</option>
+                                    <option value="Manpower & Labor Supply">Division B: Manpower & Labor Supply</option>
+                                    <option value="Career & Job Application">Careers & Talent Pool Registration</option>
+                                    <option value="General Corporate Inquiry">General Corporate Inquiry</option>
                                 </select>
                             </div>
-
                             <div class="form-group">
-                                <label for="laborCount">Required Workforce Count *</label>
-                                <input type="number" id="laborCount" min="1" required placeholder="e.g. 25">
+                                <label for="projectLocation">Project Location in KSA</label>
+                                <input type="text" id="projectLocation" class="form-control" placeholder="e.g. Riyadh, NEOM, Jeddah, Dammam">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Workforce Specifications / Message *</label>
-                            <textarea id="message" rows="4" required placeholder="Detail required trades (e.g., 10 Electricians, 15 Masons), start date, and contract duration..."></textarea>
+                            <label for="detailedMessage">Detailed Scope or Requirement Message *</label>
+                            <textarea id="detailedMessage" rows="5" class="form-control" placeholder="Specify required labor trades, manpower headcount, structural project scope, or site start dates..." required></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fa-solid fa-paper-plane"></i> Submit Quote Request
+                        <button type="submit" class="btn btn-navy btn-block">
+                            <i class="fa-solid fa-paper-plane"></i> Send Official Inquiry
                         </button>
-
-                        <div id="formFeedback" class="form-feedback hidden"></div>
                     </form>
+                    <div id="formFeedback" class="form-feedback hidden"></div>
+                </div>
+
+                <!-- Operations Sidebar -->
+                <div class="operations-sidebar">
+                    <div class="sidebar-box shadow-card">
+                        <h3><i class="fa-solid fa-headset gold-text"></i> Direct Operations Contact</h3>
+                        <p>Need urgent workforce mobilization or emergency civil site support?</p>
+                        
+                        <div class="op-links">
+                            <a href="tel:+966112345678" class="op-btn call-btn">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <div>
+                                    <small>Direct Phone Line</small>
+                                    <strong>+966 11 234 5678</strong>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/966500000000?text=Urgent%20Workforce%20Request%20for%20MBN%20International" target="_blank" class="op-btn whatsapp-btn">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <div>
+                                    <small>Instant Operations WhatsApp</small>
+                                    <strong>+966 50 000 0000</strong>
+                                </div>
+                            </a>
+
+                            <a href="mailto:info@mbn-international.com?subject=Direct%20Site%20Manager%20Inquiry" class="op-btn mail-btn">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <small>Direct Email Site Managers</small>
+                                    <strong>info@mbn-international.com</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-box info-box">
+                        <h4>Headquarters Location</h4>
+                        <p><i class="fa-solid fa-location-dot gold-text"></i> Level 12, Olaya Commercial Tower, King Fahd Road, P.O. Box 4102, Riyadh, Kingdom of Saudi Arabia</p>
+                        <p><i class="fa-solid fa-clock gold-text"></i> Sun - Thu: 8:00 AM - 5:00 PM (KSA Time)</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-grid">
+    <!-- FOOTER -->
+    <footer class="footer bg-dark-navy text-white">
+        <div class="container footer-content">
             <div class="footer-col brand-col">
-                <img src="logo.png" alt="MBN International Logo" class="footer-logo">
-                <p>Leading provider of construction services and manpower supply in Riyadh and across Saudi Arabia’s mega-development sectors.</p>
+                <a href="#home">
+                    <img src="logo.jpg" alt="MBN International Logo" class="footer-logo">
+                </a>
+                <p>MBN International is a premier construction contractor and specialized manpower labor supplier headquartered in Riyadh, driving execution across high-impact Saudi projects.</p>
+                <div class="cr-badge">
+                    <i class="fa-solid fa-id-card"></i> CR Number: 1010XXXXXX
+                </div>
             </div>
 
             <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Request Quote</a></li>
+                <h4>Quick Sitemap</h4>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Dynamic Services</a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-chevron-right"></i> Featured Projects</a></li>
+                    <li><a href="#careers"><i class="fa-solid fa-chevron-right"></i> Career Opportunities</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact & Mail Hub</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Head Office</h4>
-                <p><i class="fa-solid fa-location-dot"></i> King Fahd Road, Olaya District, Riyadh, Kingdom of Saudi Arabia</p>
-                <p><i class="fa-solid fa-id-card"></i> CR Number: 1010XXXXXX</p>
-                <p><i class="fa-solid fa-building-flag"></i> Qiwa & Muqeem Certified Partner</p>
+                <h4>Primary Divisions</h4>
+                <ul class="footer-links">
+                    <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Civil Contracting</a></li>
+                    <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Turnkey Construction</a></li>
+                    <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Skilled Manpower Supply</a></li>
+                    <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Site Equipment & Operators</a></li>
+                    <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> HSE Safety Inspections</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Riyadh Office</h4>
+                <p class="footer-address">
+                    King Fahd Road, Olaya District<br>
+                    Riyadh 12211, Kingdom of Saudi Arabia<br><br>
+                    <strong>Tel:</strong> +966 11 234 5678<br>
+                    <strong>Email:</strong> info@mbn-international.com
+                </p>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; <span id="year"></span> MBN International. All Rights Reserved. Riyadh, Kingdom of Saudi Arabia.</p>
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 MBN International. All Rights Reserved. Aligned with Saudi Vision 2030.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Engagement</a>
+                    <span>|</span>
+                    <a href="#">Qiwa Compliance Policy</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- CAREER POP-UP MODAL -->
+    <div class="modal-overlay" id="careerModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeCareerModal">&times;</button>
+            <div class="modal-header">
+                <h3>Apply for Job / Talent Pool</h3>
+                <p>Register your technical trades profile with MBN International Saudi Arabia.</p>
+            </div>
+            <form id="careerForm" class="modal-form">
+                <div class="form-group">
+                    <label for="cName">Full Name *</label>
+                    <input type="text" id="cName" class="form-control" placeholder="Your full name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cPhone">WhatsApp / Mobile *</label>
+                        <input type="tel" id="cPhone" class="form-control" placeholder="+966 5X XXX XXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cTrade">Specialty / Trade *</label>
+                        <select id="cTrade" class="form-control" required>
+                            <option value="" disabled selected>Select Trade...</option>
+                            <option value="Civil Engineer">Civil / Site Engineer</option>
+                            <option value="HSE Officer">Certified HSE Officer</option>
+                            <option value="Mason / Steel Fixer">Mason / Steel Fixer / Carpenter</option>
+                            <option value="Electrician / Plumber">MEP Electrician / Plumber</option>
+                            <option value="Heavy Equipment Operator">Heavy Equipment Operator</option>
+                            <option value="General Laborer">General Site Helper</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cExp">Years of KSA / Gulf Experience *</label>
+                    <input type="number" id="cExp" class="form-control" placeholder="e.g. 5" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="cSummary">Brief Summary of Qualifications & Status</label>
+                    <textarea id="cSummary" rows="3" class="form-control" placeholder="Mention Transferable Iqama status, current location in KSA..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold btn-block">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
