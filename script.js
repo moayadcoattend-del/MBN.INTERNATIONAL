@@ -1,167 +1,147 @@
-document.addEventListener('DOMContentLoaded', () => {
+/**
+ * MBN International - Core Interactive Functionality
+ * Pure Vanilla JavaScript (No Node / React / External Build Tools)
+ */
 
-    /* ==========================================================================
-       1. NAVIGATION & MOBILE MENU TOGGLE
-       ========================================================================== */
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const navMenu = document.getElementById('nav-menu');
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Dynamic Copyright Year
+    const yearPlaceholder = document.getElementById('yearPlaceholder');
+    if (yearPlaceholder) {
+        yearPlaceholder.textContent = new Date().getFullYear();
+    }
+
+    // 2. Sticky Header Elevation on Scroll
+    const mainHeader = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+            mainHeader.classList.add('scrolled');
+        } else {
+            mainHeader.classList.remove('scrolled');
+        }
+    });
+
+    // 3. Mobile Hamburger Navigation Drawer
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
+    if (hamburgerBtn && navbar) {
+        hamburgerBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            hamburgerBtn.classList.toggle('open');
         });
-    }
 
-    // Close mobile menu when clicking nav link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                const icon = mobileToggle.querySelector('i');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
-
-    /* ==========================================================================
-       2. INTERACTIVE SERVICE TABS
-       ========================================================================== */
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const tabTarget = btn.getAttribute('data-tab');
-
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-
-            btn.classList.add('active');
-            const activeContent = document.getElementById(tabTarget);
-            if (activeContent) {
-                activeContent.classList.add('active');
-            }
-        });
-    });
-
-    /* ==========================================================================
-       3. PORTFOLIO FILTERING SYSTEM
-       ========================================================================== */
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-
-            projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                if (filterValue === 'all' || filterValue === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+        // Close drawer on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                hamburgerBtn.classList.remove('open');
             });
         });
-    });
+    }
 
-    /* ==========================================================================
-       4. CAREER POP-UP MODAL HANDLER
-       ========================================================================== */
-    const openCareerBtn = document.getElementById('open-career-modal');
-    const closeCareerBtn = document.getElementById('closeCareerModal');
-    const careerModal = document.getElementById('careerModal');
-    const careerForm = document.getElementById('careerForm');
+    // 4. Scroll Spy (Active Navigation Highlight)
+    const sections = document.querySelectorAll('section[id]');
+    function updateActiveNav() {
+        const scrollPosition = window.pageYOffset + 120;
 
-    if (openCareerBtn && careerModal && closeCareerBtn) {
-        openCareerBtn.addEventListener('click', () => {
-            careerModal.classList.add('active');
-        });
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
 
-        closeCareerBtn.addEventListener('click', () => {
-            careerModal.classList.remove('active');
-        });
-
-        careerModal.addEventListener('click', (e) => {
-            if (e.target === careerModal) {
-                careerModal.classList.remove('active');
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
             }
         });
     }
+    window.addEventListener('scroll', updateActiveNav);
 
-    if (careerForm) {
-        careerForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const candidateName = document.getElementById('cName').value;
-            const trade = document.getElementById('cTrade').value;
-            
-            alert(`Thank you, ${candidateName}. Your application for "${trade}" has been logged into MBN International's talent pool. Our HR team in Riyadh will review your application.`);
-            
-            careerForm.reset();
-            careerModal.classList.remove('active');
-        });
-    }
-
-    /* ==========================================================================
-       5. CONTACT & MAIL HUB FORM HANDLING
-       ========================================================================== */
-    const contactForm = document.getElementById('contactForm');
+    // 5. Interactive RFQ Form Submission & WhatsApp Forwarding
+    const inquiryForm = document.getElementById('inquiryForm');
     const formFeedback = document.getElementById('formFeedback');
+    const submitBtn = document.getElementById('submitBtn');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+    if (inquiryForm) {
+        inquiryForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Form Field Values
+            // Form Fields Extraction
             const fullName = document.getElementById('fullName').value.trim();
-            const companyName = document.getElementById('companyName').value.trim() || 'N/A';
-            const email = document.getElementById('emailAddress').value.trim();
-            const phone = document.getElementById('phoneWhatsApp').value.trim();
-            const service = document.getElementById('serviceRequired').value;
-            const location = document.getElementById('projectLocation').value.trim() || 'Riyadh / Unspecified KSA';
-            const message = document.getElementById('detailedMessage').value.trim();
+            const companyName = document.getElementById('companyName').value.trim();
+            const ksaCity = document.getElementById('ksaCity').value;
+            const serviceType = document.getElementById('serviceType').value;
+            const workforceCount = document.getElementById('workforceCount').value;
+            const contactPhone = document.getElementById('contactPhone').value.trim();
+            const projectMessage = document.getElementById('projectMessage').value.trim();
 
-            // Trigger mailto link as direct fall-back or dynamic mailer handler
-            const mailtoSubject = encodeURIComponent(`Inquiry from ${fullName} - ${service}`);
-            const mailtoBody = encodeURIComponent(
-                `Full Name: ${fullName}\n` +
-                `Company: ${companyName}\n` +
-                `Email: ${email}\n` +
-                `Phone/WhatsApp: ${phone}\n` +
-                `Service Required: ${service}\n` +
-                `Project Location: ${location}\n\n` +
-                `Message / Requirement:\n${message}`
-            );
-
-            // Display Feedback Box
-            if (formFeedback) {
-                formFeedback.className = 'form-feedback success';
-                formFeedback.innerHTML = `
-                    <p><i class="fa-solid fa-circle-check"></i> <strong>Inquiry Processed!</strong> Opening your email client to dispatch details to <code>info@mbn-international.com</code>...</p>
-                `;
+            // Basic Validation Check
+            if (!fullName || !companyName || !ksaCity || !serviceType || !contactPhone) {
+                formFeedback.className = 'form-feedback error';
+                formFeedback.textContent = 'Please fill in all mandatory fields marked with an asterisk (*).';
+                return;
             }
 
-            // Launch mail client after a tiny delay
+            // Button Loading State
+            const originalBtnHtml = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing RFQ...';
+
+            // Simulate server response and compose direct WhatsApp message
             setTimeout(() => {
-                window.location.href = `mailto:info@mbn-international.com?subject=${mailtoSubject}&body=${mailtoBody}`;
-                contactForm.reset();
+                formFeedback.className = 'form-feedback success';
+                formFeedback.textContent = 'Thank you! Your RFQ has been logged. Redirecting you to WhatsApp operations desk...';
+
+                // Construct formatted WhatsApp text
+                const waText = encodeURIComponent(
+                    `*New RFQ - MBN International*\n` +
+                    `--------------------------------\n` +
+                    `*Client Name:* ${fullName}\n` +
+                    `*Company:* ${companyName}\n` +
+                    `*Project City:* ${ksaCity}\n` +
+                    `*Service:* ${serviceType}\n` +
+                    `*Workforce Scale:* ${workforceCount}\n` +
+                    `*Phone:* ${contactPhone}\n` +
+                    `*Scope/Notes:* ${projectMessage || 'None provided'}\n` +
+                    `--------------------------------\n` +
+                    `_Sent via official web portal._`
+                );
+
+                const waUrl = `https://wa.me/966539602464?text=${waText}`;
+
+                // Redirect after brief visual confirmation
+                setTimeout(() => {
+                    window.open(waUrl, '_blank');
+                    inquiryForm.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHtml;
+                }, 1200);
+
             }, 1000);
         });
     }
 
+    // 6. Bilingual Interface Switcher (Mock / Ready for Arabic Expansion)
+    const langToggle = document.getElementById('langToggle');
+    let isArabic = false;
+
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            isArabic = !isArabic;
+            if (isArabic) {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+                langToggle.querySelector('span').textContent = 'English';
+            } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+                langToggle.querySelector('span').textContent = 'عربي';
+            }
+        });
+    }
 });
